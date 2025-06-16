@@ -21,7 +21,7 @@ pipeline {
         stage('Job3: Python Program Execution') {
             steps {
                 echo 'Running Python script...'
-                sh 'python hello.py'
+                bat 'python hello.py'
             }
         }
     }
