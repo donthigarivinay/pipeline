@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Job1: GitHub Access') {
+            steps {
+                echo 'Cloning repository...'
+                git 'https://github.com/yourusername/jenkins-pipeline-demo.git'
+            }
+        }
+
+        stage('Job2: Java Program Execution') {
+            steps {
+                echo 'Compiling and running Java program...'
+                sh 'javac Hello.java'
+                sh 'java Hello'
+            }
+        }
+
+        stage('Job3: Python Program Execution') {
+            steps {
+                echo 'Running Python script...'
+                sh 'python3 hello.py'
+            }
+        }
+    }
+}
