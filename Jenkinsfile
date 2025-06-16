@@ -14,8 +14,8 @@ pipeline {
         stage('Job2: Java Program Execution') {
             steps {
                 echo 'Compiling and running Java program...'
-                sh 'javac Hello.java'
-                sh 'java Hello'
+                sh 'javac hello.java'
+                sh 'java hello'
             }
         }
 
