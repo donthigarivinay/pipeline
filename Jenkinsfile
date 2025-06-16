@@ -6,7 +6,7 @@ pipeline {
         stage('Job1: GitHub Access') {
             steps {
                 echo 'Cloning repository...'
-                git 'https://github.com/yourusername/jenkins-pipeline-demo.git'
+                git 'https://github.com/donthigarivinay/pipeline.git'
             }
         }
 
