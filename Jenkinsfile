@@ -7,22 +7,21 @@ pipeline {
             steps {
                 echo 'Cloning repository...'
                 git branch: 'main', url: 'https://github.com/donthigarivinay/pipeline.git'
-
             }
         }
 
         stage('Job2: Java Program Execution') {
             steps {
                 echo 'Compiling and running Java program...'
-                sh 'javac hello.java'
-                sh 'java hello'
+                bat 'javac hello.java'
+                bat 'java hello'
             }
         }
 
         stage('Job3: Python Program Execution') {
             steps {
                 echo 'Running Python script...'
-                sh 'python3 hello.py'
+                bat 'python hello.py'
             }
         }
     }
